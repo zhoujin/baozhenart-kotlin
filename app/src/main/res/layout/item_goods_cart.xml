@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:contentDescription="@null"
+        android:padding="6dp" />
+
+    <ImageView
+        android:id="@+id/iv_goods_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toEndOf="@+id/iv_check"
+        android:layout_toRightOf="@+id/iv_check"
+        android:contentDescription="@null" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/iv_goods_image"
+        android:layout_toRightOf="@+id/iv_goods_image">
+
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_66"
+            android:textSize="12sp"
+            tools:text="￥400" />
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_goods_price"
+            android:layout_toStartOf="@+id/tv_goods_price"
+            android:textColor="@color/color_22"
+            android:textSize="12sp"
+            tools:text="Goods Name" />
+
+        <TextView
+            android:id="@+id/tv_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_name"
+            android:textColor="@color/color_66"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="artist Name" />
+
+        <TextView
+            android:id="@+id/tv_cat_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_artist_name"
+            android:textColor="@color/color_66"
+            android:textSize="12sp"
+            tools:text="cat/brand" />
+
+        <TextView
+            android:id="@+id/tv_goods_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_cat_brand"
+            android:textColor="@color/color_66"
+            android:textSize="12sp"
+            tools:text="goods size" />
+
+        <TextView
+            android:id="@+id/tv_goods_price_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_goods_size"
+            android:textColor="@color/color_66"
+            android:textSize="12sp"
+            tools:text="￥400" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_h"
+        android:layout_below="@+id/iv_goods_image"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+</RelativeLayout>

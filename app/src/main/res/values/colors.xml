@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimary">#222222</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorAccent">#ea4344</color>
+    <color name="color_blue">#0078D7</color>
+    <color name="color_trans">#00000000</color>
+    <color name="color_white_50">#80FFFFFF</color>
+    <color name="color_22">#222222</color>
+    <color name="color_22_90">#E6222222</color>
+    <color name="color_66">#666666</color>
+    <color name="color_99">#999999</color>
+    <color name="color_f4">#F4F4F4</color>
+    <color name="color_cc">#CCCCCC</color>
+    <color name="color_e1">#e1e1e1</color>
+    <color name="color_f6">#F6F6F6</color>
+    <color name="color_black_20">#34000000</color>
+    <color name="color_black_30">#4c000000</color>
+    <!-- google zxing -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+</resources>

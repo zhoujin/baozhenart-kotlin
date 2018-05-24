@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_address"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/line1"
+            style="@style/line_i" />
+
+        <Button
+            android:id="@+id/bt_left"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/line1"
+            android:background="@color/white"
+            android:text="@string/cancel"
+            android:textColor="@color/color_66"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_right"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line1"
+            android:background="@color/white"
+            android:text="@string/sure"
+            android:textColor="@color/color_66"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_f4"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <com.markjin.artmall.view.wheelview.WheelView
+            android:id="@+id/lv_province_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@color/color_trans" />
+
+        <com.markjin.artmall.view.wheelview.WheelView
+            android:id="@+id/lv_city_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@color/color_trans" />
+
+        <com.markjin.artmall.view.wheelview.WheelView
+            android:id="@+id/lv_area_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@color/color_trans" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_top_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/include"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_address"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/iv_address"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_address"
+                    android:visibility="gone" />
+
+                <com.markjin.artmall.view.TextViewPlus
+                    android:id="@+id/tv_address_empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@android:drawable/ic_input_add"
+                    android:drawableStart="@android:drawable/ic_input_add"
+                    android:gravity="center"
+                    android:textColor="@color/color_66"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    tools:text="@string/address_empty_hint" />
+
+                <LinearLayout
+                    android:id="@+id/ll_address_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_address"
+                    android:layout_toLeftOf="@+id/iv_address_arrow"
+                    android:layout_toRightOf="@+id/iv_address"
+                    android:layout_toStartOf="@+id/iv_address_arrow"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_address_name_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_22"
+                        android:textSize="16sp"
+                        tools:text="@string/address_name_phone" />
+
+                    <TextView
+                        android:id="@+id/tv_address_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_66"
+                        android:textSize="14sp"
+                        tools:text="@string/address_empty_hint" />
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_address_arrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:contentDescription="@null"
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_arrow_right_s" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_address_line"
+                android:contentDescription="@null" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/ll_number_price"
+                    android:layout_toStartOf="@+id/ll_number_price" />
+
+                <LinearLayout
+                    android:id="@+id/ll_number_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:minHeight="40dp"
+                    android:minWidth="100dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_goods_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/color_66"
+                        android:textSize="13sp"
+                        tools:text="@string/goods_number" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/color_22"
+                        android:textSize="14sp"
+                        tools:text="@string/rmb" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_i" />
+
+            <LinearLayout
+                android:id="@+id/ll_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="@string/delivery_type" />
+
+                <com.markjin.artmall.view.TextViewPlus
+                    android:id="@+id/tv_delivery_type_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/ic_arrow_right_s"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@mipmap/ic_arrow_right_s"
+                    android:gravity="end"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="@string/delivery_fee"
+                    app:right_height="16dp"
+                    app:right_width="16dp" />
+            </LinearLayout>
+
+            <View style="@style/line_i" />
+
+            <LinearLayout
+                android:id="@+id/ll_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="@string/invoice" />
+
+                <com.markjin.artmall.view.TextViewPlus
+                    android:id="@+id/tv_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/ic_arrow_right_s"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@mipmap/ic_arrow_right_s"
+                    android:gravity="end"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:text="@string/invoice_default"
+                    app:right_height="16dp"
+                    app:right_width="16dp" />
+            </LinearLayout>
+
+            <View style="@style/line_i" />
+
+            <com.markjin.artmall.view.NoScrollListView
+                android:id="@+id/lv_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/tv_order_need_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@+id/line1"
+            android:layout_toStartOf="@+id/line1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="@string/order_need_pay" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_order_submit"
+            android:layout_toStartOf="@+id/tv_order_submit"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_order_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:minWidth="120dp"
+            android:text="@string/order_submit"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>
